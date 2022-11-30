@@ -26,8 +26,7 @@ const [data, setData] = useState<Person>();
 
   return (
     <div className={styles.container}>
-      {/* <h1>Dominik Mrówka</h1>
-      <Link to="/register"><button>Register</button></Link> */}
+      <h1 className={styles.nameSurname}>Dominik Mrówka</h1>
       <div className={styles.mainComponent}>
         <img className={styles.image} src={photo} alt="" />
         <div className={styles.additionalButtons}>
@@ -45,12 +44,14 @@ const [data, setData] = useState<Person>();
 
         <div className={styles.ageEyeColorContainer}>
           <h3>age: {data && data.birth_year}</h3>
-          <h3>eye color:{data && data.eye_color}</h3>
+          <h3>eye color: {data && data.eye_color}</h3>
         </div>
 
-                <button className={styles.buttonNextProfile} onClick={() => handleClick()}><span>next profiles</span></button>
+        <button className={styles.buttonNextProfile} onClick={() => handleClick()}><span>next profiles</span></button>
 
       </div>
+            <Link to="/register"><button className={styles.buttonRegister}><span>formularz rejestracyjny</span></button></Link>
+
     </div>
   );
 }

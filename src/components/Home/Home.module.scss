@@ -1,11 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;800&family=Lato:ital@1&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;800&family=Lato:ital@0;1&display=swap');
 .container {
   margin: 0 auto;
-  // background-color: red;
   width: 1130px;
   height: 1200px;
-  // background-color: #FFF;
+  position: relative;
+
+  .nameSurname{
+    width: 580px;
+    height: 77px;
+    position: absolute;
+    top: 11px;
+    left: 21px;
+
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+  }
 
   .mainComponent{
     width: 800px;
@@ -15,7 +26,6 @@
     position: relative;
     top: 188px;
     left: 151px;
-    // filter: drop-shadow(12px 4px 4px rgba(0, 0, 0, 0.6));
     box-shadow: 14px 5px 3px -1px rgba(3, 3, 3, 0.632);
 
 
@@ -28,7 +38,7 @@
 
       background: url('https://picsum.photos/534/383');
       border-radius: 200px 20px 100px 50px;
-    }
+    };
 
     .additionalButtons{
       .addToFavorite{
@@ -50,9 +60,9 @@
           &:hover{
             cursor: pointer;
             scale: 1.1;
-          }
-        }
-      }
+          };
+        };
+      };
       .checkButton{
         width: 56.81px;
         height: 53.15px;
@@ -72,10 +82,10 @@
           &:hover{
             cursor: pointer;
             scale: 1.1;
-          }
-        }
-      }
-    }
+          };
+        };
+      };
+    };
 
     .nameContainer{
       width: 333.82px;
@@ -84,15 +94,16 @@
       top: 549.39px;
       left:226.65px;
       span{
-      font-family: 'Inter';
+      display: block;
+      font-family: 'Inter', sans-serif;
       font-style: normal;
       font-weight: 800;
-      font-size: 35px;
+      font-size: 33px;
       line-height: 61px;
       text-align: center;
-      }
+      };
 
-    }
+    };
 
     .ageEyeColorContainer{
       width: 368.37px;
@@ -108,10 +119,10 @@
       font-weight: 100;
       font-size: 20px;
       line-height: 24px;
-      }
+      };
 
 
-    }
+    };
 
     .buttonNextProfile{
       border:none;
@@ -129,7 +140,7 @@
       &:hover{
         cursor: pointer;
         background: #26490a;
-      }
+      };
 
       span{
         position: absolute;
@@ -141,8 +152,43 @@
         line-height: 30px;
         color: #FFFFFF;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      }
-    }
-  }
-}
+      };
+    };
+  };
+  .buttonRegister{
+    width: 236px;
+    height: 90px;
+    position: absolute;
+    top: 11px;
+    left: 868px;
+    background-color: #40483A;
+    border-radius: 20px;
+    box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.75);
+    border: none;
+
+    span{
+      width: 195.61px;
+      height: 34.66px;
+      display: block;
+      position: absolute;
+      top: 10.5px;
+      left: 43.3px;
+      text-align: left;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-style: italic;
+      font-size: 30px;
+      line-height: 30px;
+      color: #FFFFFF;
+      border: none;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    };
+
+    &:hover{
+      cursor: pointer;
+      background: #26490a;
+    };
+  };
+
+};
 
