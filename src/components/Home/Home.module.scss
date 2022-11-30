@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;800&family=Lato:ital@1&display=swap');
+
+.container {
+  margin: 0 auto;
+  // background-color: red;
+  width: 1130px;
+  height: 1200px;
+  // background-color: #FFF;
+
+  .mainComponent{
+    width: 800px;
+    height: 739.83px;
+    background: rgba(54, 44, 44, 0.39);
+    border-radius: 500px 60px 300px 100px;
+    position: relative;
+    top: 188px;
+    left: 151px;
+    // filter: drop-shadow(12px 4px 4px rgba(0, 0, 0, 0.6));
+    box-shadow: 14px 5px 3px -1px rgba(3, 3, 3, 0.632);
+
+
+    .image{
+      position: absolute;
+      left: 18%;
+      right: 15.25%;
+      top: 16.98%;
+      bottom: 36.56%;
+
+      background: url('https://picsum.photos/534/383');
+      border-radius: 200px 20px 100px 50px;
+    }
+
+    .additionalButtons{
+      .addToFavorite{
+        width: 57.39px;
+        height: 53.15px;
+
+        position: absolute;
+        top: 549.39px;
+        left:558.13px;
+        img{
+          width: 52.61px;
+          height: 35.43px;
+
+          position: absolute;
+          top: 9.04px;
+          left: 0px;
+          transition: 0.3s;
+
+          &:hover{
+            cursor: pointer;
+            scale: 1.1;
+          }
+        }
+      }
+      .checkButton{
+        width: 56.81px;
+        height: 53.15px;
+
+        position: absolute;
+        top: 549.39px;
+        left: 615.52px;
+        img{
+          width: 47.34px;
+          height: 44.29px;
+
+          position: absolute;
+          top: 4.25px;
+          left: 9.66px;
+          transition: 0.3s;
+
+          &:hover{
+            cursor: pointer;
+            scale: 1.1;
+          }
+        }
+      }
+    }
+
+    .nameContainer{
+      width: 333.82px;
+      height: 76.26px;
+      position: absolute;
+      top: 549.39px;
+      left:226.65px;
+      span{
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 800;
+      font-size: 35px;
+      line-height: 61px;
+      text-align: center;
+      }
+
+    }
+
+    .ageEyeColorContainer{
+      width: 368.37px;
+      height: 59.5px;
+
+      position: absolute;
+      top: 610.63px;
+      left: 226.65px;
+
+      h3{
+      font-family: 'Inter', sans-serif;
+      font-style: italic;
+      font-weight: 100;
+      font-size: 20px;
+      line-height: 24px;
+      }
+
+
+    }
+
+    .buttonNextProfile{
+      border:none;
+      width: 224.3px;
+      height: 54.88px;
+      position: absolute;
+      top:769.5px;
+      left:281.7px;
+
+      background: #35660E;
+      box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.75);
+      border-radius: 20px;
+      transition: 0.3s;
+
+      &:hover{
+        cursor: pointer;
+        background: #26490a;
+      }
+
+      span{
+        position: absolute;
+        left: 31.3px;
+        top: 10.5px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 30px;
+        color: #FFFFFF;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+}
+

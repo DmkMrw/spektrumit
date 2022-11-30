@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from 'react-router-dom';
+import styles from './Home.module.scss';
 
 interface Person {
   name: string,
-  height: number,
+  eye_color: string,
+  birth_year: string,
 }
 
 const Home = () => {
@@ -23,13 +25,32 @@ const [data, setData] = useState<Person>();
   }
 
   return (
-    <div>
-      <h1>Dominik Mrówka</h1>
-      <Link to="/register"><button>Register</button></Link>
-      <h1>{data && data.name}</h1>
-      <h2>{data && data.height}</h2>
-      <button onClick={() => handleClick()}>Button</button>
-      <img src={photo} alt="" />
+    <div className={styles.container}>
+      {/* <h1>Dominik Mrówka</h1>
+      <Link to="/register"><button>Register</button></Link> */}
+      <div className={styles.mainComponent}>
+        <img className={styles.image} src={photo} alt="" />
+        <div className={styles.additionalButtons}>
+          <div className={styles.addToFavorite}>
+            <img src="./images/addToFavorite.svg" alt="" />
+          </div>
+          <div className={styles.checkButton}>
+            <img src="./images/checkButton.svg" alt="" />
+          </div>
+
+        </div>
+        <div className={styles.nameContainer}>
+          <span>{data && data.name}</span>
+        </div>
+
+        <div className={styles.ageEyeColorContainer}>
+          <h3>age: {data && data.birth_year}</h3>
+          <h3>eye color:{data && data.eye_color}</h3>
+        </div>
+
+                <button className={styles.buttonNextProfile} onClick={() => handleClick()}><span>next profiles</span></button>
+
+      </div>
     </div>
   );
 }
