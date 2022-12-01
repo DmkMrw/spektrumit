@@ -193,3 +193,67 @@
 
 };
 
+@media(max-width:1140px){
+
+  .container{
+    width: 550px;
+
+    .nameSurname{
+      width: 500px;
+    };
+
+    .mainComponent{
+      width: 400px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      .image {
+        width: 360px;
+        left: 5%;
+      };
+
+      .nameContainer {
+        top: 530px;
+        left: 0;
+      };
+
+      .ageEyeColorContainer {
+        left: 40px;
+      };
+
+      .additionalButtons{
+        .addToFavorite{
+          display: block;
+          top: 400px;
+          left: 55px;
+
+          img {
+            width: 120px;
+            height: 80px;
+          };
+        };
+
+        .checkButton {
+          top: 410px;
+          left: 230px;
+
+          img {
+            width: 120px;
+            height: 80px;
+          };
+        };
+      };
+
+      .buttonNextProfile {
+        left: 50%;
+        transform: translateX(-50%);
+      };
+    };
+    .buttonRegister{
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+    };
+  };
+};
