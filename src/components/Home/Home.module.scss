@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;800&family=Lato:ital@0;1&display=swap');
+@import './../../styles/settings.scss';
 .container {
   margin: 0 auto;
   width: 1130px;
   height: 1200px;
   position: relative;
+  background-color: $color-white;
 
   .nameSurname{
     width: 580px;
@@ -21,12 +23,12 @@
   .mainComponent{
     width: 800px;
     height: 739.83px;
-    background: rgba(54, 44, 44, 0.39);
+    background: $color-main-component;
     border-radius: 500px 60px 300px 100px;
     position: relative;
     top: 188px;
     left: 151px;
-    box-shadow: 14px 5px 3px -1px rgba(3, 3, 3, 0.632);
+    box-shadow: 14px 5px 3px -1px $color-boxShadow-main-Component;
 
 
     .image{
@@ -132,14 +134,14 @@
       top:769.5px;
       left:281.7px;
 
-      background: #35660E;
-      box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.75);
+      background: $color-next-profile-button;
+      box-shadow: 10px 4px 4px $color-black-shadow;
       border-radius: 20px;
       transition: 0.3s;
 
       &:hover{
         cursor: pointer;
-        background: #26490a;
+        background: $color-next-profile-button-hover;
       };
 
       span{
@@ -150,8 +152,8 @@
         font-weight: 700;
         font-size: 30px;
         line-height: 30px;
-        color: #FFFFFF;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        color: $color-white;
+        text-shadow: 0px 4px 4px $color-black-shadow;
       };
     };
   };
@@ -161,9 +163,9 @@
     position: absolute;
     top: 11px;
     left: 868px;
-    background-color: #40483A;
+    background-color: $color-register-button;
     border-radius: 20px;
-    box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 4px 4px $color-black-shadow;
     border: none;
     transition: 0.3s;
 
@@ -180,14 +182,14 @@
       font-style: italic;
       font-size: 30px;
       line-height: 30px;
-      color: #FFFFFF;
+      color: $color-white;
       border: none;
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     };
 
     &:hover{
       cursor: pointer;
-      background: #26490a;
+      background: $color-register-button-hover;
     };
   };
 

@@ -1,18 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;800&family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
-
+@import './../../styles/settings.scss';
 *:focus {
-    outline: none;
-}
-
-body {
-  background-color: #ddd;
-}
+  outline: none;
+};
 
 .container {
   width: 1130px;
   height:1200px;
   position: relative;
-  background-color: #fff;
+  background-color: $color-white;
   margin: 0 auto;
 
   .pageTitle{
@@ -21,7 +17,6 @@ body {
     position: absolute;
     top: 101px;
     left: 59px;
-
     font-family: 'Inter';
     font-style: normal;
     font-weight: 800;
@@ -29,20 +24,20 @@ body {
     line-height: 52.64px;
     text-align: right;
     letter-spacing: 0.15em;
-    color: #000000;
+    color: $color-black;
 
     &::after{
       display: block;
       content: '';
       width: 166.17px;
       height: 9.29px;
-      background-color: #071594;
+      background-color: $color-decoration;
 
       position: absolute;
       bottom: -21.68px;
       right: 0;
-    }
-  }
+    };
+  };
 
   .registerForm{
     width: 752.87px;
@@ -50,10 +45,8 @@ body {
     position: absolute;
     top: 166.03px;
     left: 203.13px;
-
     display: flex;
     flex-direction: column;
-
 
     .inputLabel{
       width: 345.91px;
@@ -63,7 +56,7 @@ body {
       font-weight: 700;
       font-size: 20px;
       line-height: 43.35px;
-    }
+    };
 
     .inputLabel:nth-of-type(1){
       position: absolute;
@@ -75,12 +68,12 @@ body {
         content: '';
         width: 752.87px;
         height: 1.55px;
-        background-color: #000;
+        background-color: $color-black;
         position: absolute;
         top: 89.8px;
         left: 0;
-      }
-    }
+      };
+    };
 
     .inputLabel:nth-of-type(2){
       position: absolute;
@@ -92,12 +85,13 @@ body {
         content: '';
         width: 752.87px;
         height: 1.55px;
-        background-color: #000;
+        background-color: $color-black;
         position: absolute;
         top: 89.8px;
         left: 0;
-      }
-    }
+      };
+    };
+
     .inputLabel:nth-of-type(3){
       position: absolute;
       top: 294.18px;
@@ -108,12 +102,13 @@ body {
         content: '';
         width: 752.87px;
         height: 1.55px;
-        background-color: #000;
+        background-color: $color-black;
         position: absolute;
         top: 89.8px;
         left: 0;
-      }
-    }
+      };
+    };
+
     .inputLabel:nth-of-type(4){
       position: absolute;
       top: 408.76px;
@@ -124,40 +119,40 @@ body {
         content: '';
         width: 752.87px;
         height: 1.55px;
-        background-color: #000;
+        background-color: $color-black;
         position: absolute;
         top: 89.8px;
         left: 0;
-      }
-    }
+      };
+    };
 
     input{
       border: none;
       height: 40px;
       font-size: 30px;
       padding-left: 10px;
-    }
+    };
 
     .login{
       position: absolute;
       top: 115px;
       left: 0;
       width: 100%;
-    }
+    };
 
     .password{
       position: absolute;
       top: 229.5px;
       left: 0;
       width: 100%;
-    }
+    };
 
     .email{
       position: absolute;
       top: 344px;
       left: 0;
       width: 100%;
-    }
+    };
 
     .incorrectFormatMail{
       width: 349.91px;
@@ -165,7 +160,7 @@ body {
       position: absolute;
       top: 379.97px;
       right: -18px;
-      color: #f00;
+      color: $color-red;
       font-family: 'Inter';
       font-style: italic;
       font-weight: 300;
@@ -177,25 +172,25 @@ body {
         content: '';
         width: 752.87px;
         height: 1.55px;
-        background-color: rgb(255, 0, 0);
+        background-color: $color-red;
         position: absolute;
         top: 4px;
         right: 18px;
-      }
-    }
+      };
+    };
 
     .phone{
       position: absolute;
       top: 458.5px;
       left: 0;
       width: 100%;
-    }
+    };
 
     .incorrectPhoneNumber{
       position: absolute;
       top: 494.97px;
       right: 0px;
-      color: #f00;
+      color: $color-red;
       font-family: 'Inter';
       font-style: italic;
       font-weight: 300;
@@ -207,14 +202,13 @@ body {
         content: '';
         width: 752.87px;
         height: 1.55px;
-        background-color: rgb(255, 0, 0);
+        background-color: $color-red;
         position: absolute;
         top: 3.5px;
         right: 0;
-      }
-
-    }
-  }
+      };
+    };
+  };
 
   .checkbox{
     width: 30px;
@@ -222,7 +216,7 @@ body {
     position: absolute;
     top: 709px;
     left: 208px;
-  }
+  };
 
   .checkboxDescription{
     width: 345.91px;
@@ -235,7 +229,7 @@ body {
     font-weight: 700;
     font-size: 20px;
     line-height: 165%;
-  }
+  };
 
   .incorrectCheckbox{
     width: 345.91px;
@@ -243,14 +237,14 @@ body {
     position: absolute;
     top: 704px;
     left: 481px;
-    color: #f00;
+    color: $color-red;
     font-family: 'Inter';
     font-style: italic;
     font-weight: 300;
     font-size: 20px;
     line-height: 43.35px;
     text-align: right;
-  }
+  };
 
   .buttonSave{
     width: 224.3px;
@@ -258,14 +252,14 @@ body {
     position: absolute;
     top: 766px;
     left: 468px;
-    background: #071594;
+    background: $color-save-button;
     box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.75);
     border-radius: 20px;
     transition: 0.3s;
 
     &:hover{
       cursor: pointer;
-      background-color: #071167;
+      background-color: $color-save-button-hover;
     }
     span {
       width: 195.61px;
@@ -281,8 +275,66 @@ body {
       line-height: 100%;
       text-align: center;
 
-      color: #FFFFFF;
+      color: $color-white;
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-  }
-}
+    };
+  };
+};
+
+@media(max-width:1140px){
+  .container {
+    width: 550px;
+
+    .pageTitle{
+      width: 100%;
+      left: 0;
+      text-align: center;
+
+      &::after{
+        left: 50%;
+        transform: translateX(-50%);
+      };
+    };
+    .registerForm{
+      width: calc(100% - 15px);
+      left: 15px;
+
+      .inputLabel{
+
+        &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4){
+          &::after{
+            width: calc(550px - 30px);
+          };
+        };
+      };
+
+      .incorrectPhoneNumber, .incorrectFormatMail{
+        width: fit-content;
+        left: 0px;
+        &::after{
+          width: 520px;
+          left: 0px;
+        };
+      };
+    };
+    .checkbox{
+      left: 15px;
+    };
+
+    .checkboxDescription {
+      left: 66px;
+    };
+
+    .buttonSave{
+      top: 800px;
+      left: 50%;
+      transform: translateX(-50%);
+    };
+
+    .incorrectCheckbox{
+      width: fit-content;
+      top: 734px;
+      left: 15px;
+    };
+  };
+};
