@@ -1,34 +1,46 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from 'react-router-dom';
 import styles from './Home.module.scss';
+import { FC } from 'react';
 
 interface Person {
   name: string,
   eye_color: string,
   birth_year: string,
-}
+};
 
-const Home = () => {
-const [data, setData] = useState<Person>();
+interface PassData {
+  setPassData: any,
+};
+
+const Home: FC<PassData> = ({ setPassData = '' }: PassData) => {
+
+  const [data, setData] = useState<Person>();
   const [number, setNumber] = useState<number>(1);
-  const [photo, setPhoto] = useState('https://picsum.photos/534/383')
+  const [photo, setPhoto] = useState('https://picsum.photos/534/383');
 
-  useEffect( () => {
+  useEffect(() => {
     fetch(`https://swapi.dev/api/people/${number}/`)
-    .then((res) => res.json())
-    .then((ppl) => setData(ppl))
-  }, [number])
+      .then((res) => res.json())
+      .then((ppl) => setData(ppl))
+  }, [number]);
+
+  useEffect(() => {
+    setPassData(data)
+  }, [data]);
 
   const handleClick = () => {
     setNumber(prevState => prevState + 1)
     setPhoto('https://picsum.photos/534/383')
-  }
+  };
 
   return (
     <div className={styles.container}>
       <h1 className={styles.nameSurname}>Dominik Mrówka</h1>
       <div className={styles.mainComponent}>
+
         <img className={styles.image} src={photo} alt="" />
+
         <div className={styles.additionalButtons}>
           <div className={styles.addToFavorite}>
             <img src="./images/addToFavorite.svg" alt="" />
@@ -36,8 +48,8 @@ const [data, setData] = useState<Person>();
           <div className={styles.checkButton}>
             <img src="./images/checkButton.svg" alt="" />
           </div>
-
         </div>
+
         <div className={styles.nameContainer}>
           <span>{data && data.name}</span>
         </div>
@@ -50,8 +62,7 @@ const [data, setData] = useState<Person>();
         <button className={styles.buttonNextProfile} onClick={() => handleClick()}><span>next profiles</span></button>
 
       </div>
-            <Link to="/register"><button className={styles.buttonRegister}><span>formularz rejestracyjny</span></button></Link>
-
+      <Link to="/register"><button className={styles.buttonRegister}><span>formularz rejestracyjny</span></button></Link>
     </div>
   );
 }
